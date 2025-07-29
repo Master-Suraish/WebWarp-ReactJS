@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github User Finder (Project 1)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="main-container">
+        <!-- Search content HTML -->
+        <div class="search-container">
+          <p class="porject-name">Github User Finder</p>
+          <input
+            type="text"
+            placeholder="Enter user name like 'master suraish'"
+            id="searchInput"
+          />
+          <button id="searchButton">Search User</button>
+        </div>
+      </div>
+
+      <!-- Cards content HTML -->
+      <div class="card-container hide">
+        <div class="onlyForColor">
+          <div class="card-img">
+            <img src="" alt="" srcset="" />
+          </div>
+
+          <div class="Network">
+            <div class="followers">
+              <p id="followers-id"></p>
+              <p>followers</p>
+            </div>
+            <div class="following">
+              <p id="following-id"></p>
+              <p>following</p>
+            </div>
+          </div>
+
+          <div class="user-info">
+            <div class="user-name"></div>
+            <div class="user-join-date">
+              <p>Joined on :</p>
+              <p id="join-date-id"></p>
+            </div>
+            <div class="user-public-repo">
+              <p>Public repos :</p>
+              <p id="public-repo-id"></p>
+            </div>
+            <div class="user-location">
+              <p>Location :</p>
+              <p id="location-id"></p>
+            </div>
+            <div class="user-bio"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

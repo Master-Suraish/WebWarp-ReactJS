@@ -1,0 +1,226 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Search content CSS */
+
+main {
+  background-color: #05223a;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* for border effect*/
+  position: relative;
+  z-index: 1;
+}
+
+.search-container {
+  background-color: #60619a;
+  border-radius: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 15rem;
+  width: 40rem;
+  p {
+    font-size: 40px;
+    color: #05223a;
+    font-weight: bold;
+  }
+  input {
+    background-color: #ccdbdc;
+    height: 3rem;
+    width: 30rem;
+    border-radius: 0.5rem;
+    padding-left: 20px;
+    font-size: 25px;
+    outline: none;
+  }
+
+  #searchButton {
+    background-color: #05223a;
+    color: rgb(225, 216, 216);
+    height: 3rem;
+    width: 9rem;
+    border-radius: 1rem;
+    font-size: 20px;
+    /* border-bottom: 5px solid rgba(0, 0, 0, 0.501); */
+    /* border-right: 5px solid rgba(0, 0, 0, 0.501); */
+  }
+}
+
+/* Cards content CSS */
+
+.card-container {
+  /* for border effect */
+  position: relative;
+  z-index: 1;
+}
+
+.onlyForColor {
+  background-image: linear-gradient(#5d9ce6, #fe82b0);
+  border-radius: 0.5rem;
+  height: 30rem;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card-img {
+  img {
+    border: 5px solid rgb(213, 210, 111);
+    border-radius: 50%;
+    height: 10rem;
+    background-color: black;
+  }
+}
+
+.Network {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.784);
+  height: 3.5rem;
+  width: 95%;
+  border-radius: 0.5rem;
+  color: rgb(165, 153, 153);
+
+  .followers {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 2.5rem;
+    width: 8rem;
+    font-size: 20px;
+    #followers-id {
+      font-size: 32px;
+      color: white;
+    }
+  }
+
+  .following {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 2.5rem;
+    width: 8rem;
+    font-size: 20px;
+    #following-id {
+      font-size: 32px;
+      color: white;
+    }
+  }
+}
+
+.user-info {
+  height: 14rem;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  .user-name {
+    background-color: rgba(255, 255, 255, 0.319);
+    border-radius: 10px;
+    padding: 5px;
+
+    font-size: 32px;
+    font-weight: bold;
+  }
+  .user-public-repo {
+    background-color: rgba(255, 255, 255, 0.319);
+    padding: 2px;
+    border-radius: 10px;
+    padding-left: 10px;
+
+    display: flex;
+    #public-repo-id {
+      margin-left: 20px;
+    }
+  }
+  .user-join-date {
+    background-color: rgba(255, 255, 255, 0.319);
+    padding: 2px;
+    border-radius: 10px;
+    padding-left: 10px;
+
+    display: flex;
+    #join-date-id {
+      margin-left: 40px;
+    }
+  }
+  .user-location {
+    background-color: rgba(255, 255, 255, 0.319);
+    padding: 2px;
+    border-radius: 10px;
+    padding-left: 10px;
+
+    display: flex;
+    #location-id {
+      margin-left: 42px;
+    }
+  }
+  .user-bio {
+    background-color: rgba(255, 255, 255, 0.319);
+    border-radius: 10px;
+    padding-left: 10px;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+/* Border effect CSS to ".main-container" & ".card-container" */
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.main-container::after,
+.main-container::before,
+.card-container::before,
+.card-container::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(
+    from var(--angle),
+    /* transparent 10%, */ #00ff99,
+    #006aff,
+    #ff0095,
+    #ff4545
+  );
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 2px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}

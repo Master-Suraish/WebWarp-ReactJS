@@ -15,11 +15,11 @@
 - Tech Stacks : Vite + React.
 
 ### Assignment 03 : Todo List App (React , Tailwind) live Link :
-- https://master-suraish.github.io/WebWarp-ReactJS/Todo-List-App/index.html
+- https://master-suraish.github.io/WebWarp-ReactJS/React-Projects/Build-Folders/Todo-List-App-Build/index.html
 - Tech Stacks : Vite + React , Tailwind CSS.
 
 ### Assignment 04 : Products Cards (React , Tailwind) live Link :
-- https://master-suraish.github.io/WebWarp-ReactJS/Product-Cards/index.html
+- https://master-suraish.github.io/WebWarp-ReactJS/React-Projects/Build-Folders/Product-Cards-Build/index.html
 - Tech Stacks : Vite + React , Tailwind CSS.
 
 ### Thanks for Reading !

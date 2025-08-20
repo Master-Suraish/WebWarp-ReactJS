@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+/* * Below Custom CSS to create custom button which on radio checked/unchecked */
+
+.myCustomRadiobtn {
+  width: 15rem;
+  padding-left: 5px;
+  border: 1.5px solid black;
+}
+
+.inputRadiobtn:checked ~ .myCustomRadiobtn,
+.myCustomRadiobtn:hover {
+  background-color: #8ebefa;
+}
+
+.inputRadiobtn {
+  display: none;
+}

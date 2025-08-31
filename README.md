@@ -27,7 +27,7 @@
 - Tech Stacks : Vite + React , Tailwind CSS.
 - 
 ### Assignment 06 : Student Feedback Portal (React , Tailwind) live Link :
-- https://master-suraish.github.io/WebWarp-ReactJS/React-Projects/Build-Folders/Student-Feedback/index.html
+- https://master-suraish.github.io/WebWarp-ReactJS/React-Projects/Build-Folders/Student-feedback-build/index.html
 - Tech Stacks : Vite + React , Tailwind CSS.
   
 ### Thanks for Reading !

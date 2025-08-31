@@ -88,8 +88,8 @@ export default function ShowFeedbacks({
                             <button
                               className="bg-red-500 rounded-lg border-1 w-100 font-semibold text-white hover:bg-red-700"
                               onClick={() => {
-                                pass_confirDdeleteFeedback_func();
-                                pass_getIndexFromChild_stateFunc(index);
+                                pass_confirDdeleteFeedback_func(obj.id);
+                                // pass_getIndexFromChild_stateFunc(index);
                               }}
                             >
                               Delete feedback
@@ -180,8 +180,8 @@ export default function ShowFeedbacks({
                             <button
                               className="bg-red-500 rounded-lg border-1 w-100 font-semibold text-white hover:bg-red-700"
                               onClick={() => {
-                                pass_confirDdeleteFeedback_func();
-                                pass_getIndexFromChild_stateFunc(index);
+                                pass_confirDdeleteFeedback_func(obj.id);
+                                // pass_getIndexFromChild_stateFunc(index);
                               }}
                             >
                               Delete feedback
@@ -198,7 +198,7 @@ export default function ShowFeedbacks({
         : pass_SavedAllFeedbacks_state.map((obj, index) => {
             return (
               //? show feedbacks of All ratings :
-              <div key={index}>
+              <div key={obj.id}>
                 {obj.StudentName && (
                   <div className="bg-fuchsia-300 border-2 rounded-2xl">
                     <div className="flex flex-col justify-evenly ms-3 w-115 h-150">
@@ -277,8 +277,8 @@ export default function ShowFeedbacks({
                             <button
                               className="bg-red-500 rounded-lg border-1 w-110 font-semibold text-white hover:bg-red-700"
                               onClick={() => {
-                                pass_confirDdeleteFeedback_func();
-                                pass_getIndexFromChild_stateFunc(index);
+                                pass_confirDdeleteFeedback_func(obj.id);
+                                // pass_getIndexFromChild_stateFunc(index);
                               }}
                             >
                               Delete feedback

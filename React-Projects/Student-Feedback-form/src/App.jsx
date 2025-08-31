@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ShowFeedbacks from "./Components/ShowFeedbacks";
+import { v4 as uuidv4 } from "uuid";
 
 function App() {
   //* To take and save text from input.
@@ -15,7 +16,8 @@ function App() {
     feedbackText: "",
   });
 
-  const [getIndexFromChild, setGetIndexFromChild] = useState(0);
+  // const [getIndexFromChild, setGetIndexFromChild] = useState(0);
+  const [saveUuidv4, setSaveUuidv4] = useState(0);
 
   const [saveAllFeedbacks, setSaveAllFeedbacks] = useState([]);
 
@@ -55,7 +57,9 @@ function App() {
 
     if (countFeedbacks === 5) return handleFeedbackLimitToast();
 
-    setSaveAllFeedbacks((pre) => [...pre, takeFeedbacks]);
+    const add_uuidv4_inFeedback = { id: uuidv4(), ...takeFeedbacks };
+
+    setSaveAllFeedbacks((pre) => [...pre, add_uuidv4_inFeedback]);
 
     setTakeFeedBacks({
       StudentName: "",
@@ -76,15 +80,27 @@ function App() {
     setTakeFeedBacks((pre) => ({ ...pre, [e.target.name]: e.target.value }));
   }
 
-  function confirmDeleteFeedback() {
+  function confirmDeleteFeedback(id) {
+    console.log(id);
+
+    setSaveUuidv4(id);
     setFeedbacksDeleteToast(true);
   }
 
+  // function deleteFeedback() {
+  //   console.log(saveUuidv4);
+
+  //   setSaveAllFeedbacks((pre) => [
+  //     ...pre,
+  //     saveAllFeedbacks.splice(saveUuidv4, 1),
+  //   ]);
+  //   setFeedbacksDeleteToast(false);
+  // }
+
   function deleteFeedback() {
-    setSaveAllFeedbacks((pre) => [
-      ...pre,
-      saveAllFeedbacks.splice(getIndexFromChild, 1),
-    ]);
+    setSaveAllFeedbacks(
+      (prev) => prev.filter((fb) => fb.id !== saveUuidv4) // keep all except the one with matching id
+    );
     setFeedbacksDeleteToast(false);
   }
 
@@ -114,7 +130,7 @@ function App() {
             <p className="text-white">Are you sure to delete Feedback ?</p>
             <div className="flex justify-evenly mt-5">
               <button
-                onClick={() => deleteFeedback(getIndexFromChild)}
+                onClick={() => deleteFeedback()}
                 className="bg-white w-30 rounded border hover:bg-gray-300"
               >
                 Yes
@@ -310,7 +326,7 @@ function App() {
           pass_ShowRatingFeedbacks_state={showFeedbacksByRating}
           pass_SavedAllFeedbacks_state={saveAllFeedbacks}
           pass_confirDdeleteFeedback_func={confirmDeleteFeedback}
-          pass_getIndexFromChild_stateFunc={setGetIndexFromChild}
+          // pass_getIndexFromChild_stateFunc={setGetIndexFromChild}
         />
       </div>
     </>

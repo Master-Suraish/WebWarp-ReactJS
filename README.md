@@ -26,7 +26,7 @@
 - https://master-suraish.github.io/WebWarp-ReactJS/React-Projects/Build-Folders/Quiz-App-Build/index.html
 - Tech Stacks : Vite + React , Tailwind CSS.
 - 
-### Assignment 05 : Quiz App (React , Tailwind) live Link :
+### Assignment 06 : Student Feedback Portal (React , Tailwind) live Link :
 - https://master-suraish.github.io/WebWarp-ReactJS/React-Projects/Build-Folders/Student-Feedback/index.html
 - Tech Stacks : Vite + React , Tailwind CSS.
   

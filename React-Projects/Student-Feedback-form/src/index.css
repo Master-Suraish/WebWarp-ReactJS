@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+.myCustomRadioBtn {
+  padding: 2px 5px;
+  border: 1.5px solid black;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+
+.getRadioBtn:checked ~ .myCustomRadioBtn,
+.myCustomRadioBtn:hover {
+  background-color: #8a0194;
+}
+
+.getRadioBtn {
+  display: none;
+}

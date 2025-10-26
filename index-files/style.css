@@ -6,7 +6,7 @@
 
 main {
   background-color: #d5d6ca;
-  height: 100vh;
+  /* height: 100vh; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center;
